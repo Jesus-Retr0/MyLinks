@@ -16,6 +16,11 @@ body, html {
     text-align: center;
     color: #232b39;
 }
+@media(max-width:533px) {
+    .container {
+        width: 100%;
+    }
+}
 
 .background {
     position: absolute;
