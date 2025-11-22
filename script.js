@@ -1,6 +1,6 @@
 const data = {
     user: {
-        name: "Jesus de la Paz",
+        name: "Jesus De La Paz",
         subtitle: "🚀 Software developer | Passionate about creating innovative tech! 💻✨",
         imageUrl: "./assets/avatar.png"
     },
