@@ -92,5 +92,16 @@ document.addEventListener("DOMContentLoaded", () => {
         suggestedProjectsContainer.appendChild(grid);
     }
 
+    // Add a footer with the current year
+    (function addFooter() {
+        const container = document.querySelector('.container');
+        const footer = document.createElement('footer');
+        footer.className = 'site-footer';
+        const year = new Date().getFullYear();
+        footer.innerHTML = `<div class="footer-inner">&copy; ${year} Jesus de la Paz</div>`;
+        // Insert footer after the main container so it sits below the content
+        if (container && container.parentNode) container.parentNode.appendChild(footer);
+        else document.body.appendChild(footer);
+    })();
     renderSuggestedProjects(data.suggestedProjects);
 });
