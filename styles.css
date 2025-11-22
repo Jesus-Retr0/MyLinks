@@ -1,0 +1,155 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #222222;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    color: #232b39;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./assets/background.gif') no-repeat center center/cover;
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.user-name{
+    color: white;
+}
+
+.content {
+    top: 50px;
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.user-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+/* Make the links line up horizontally and wrap on small screens */
+.links {
+    display: flex;
+    flex-wrap: wrap;        /* allow wrapping when space is tight */
+    gap: 12px;              /* space between items */
+    justify-content: center;/* center the row(s) horizontally */
+    align-items: stretch;   /* keep items uniform height if desired */
+    margin-top: 18px;
+    padding: 0 8px;
+}
+
+/* Each link appears as a pill/card and can size responsively */
+.link-item {
+    display: inline-flex;           /* inline so items sit next to each other */
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: #00bcd4;
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    min-width: 160px;              /* prevents shrinking too small on wide screens */
+    max-width: 320px;
+    flex: 1 1 160px;               /* grow and shrink, base width 160px */
+    box-sizing: border-box;
+}
+
+/* Keep the icon and label nice inside the link */
+.link-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+/* Optional: change layout on very small screens */
+@media (max-width: 420px) {
+    .link-item {
+        min-width: 120px;
+        padding: 8px 10px;
+        font-size: 0.95rem;
+    }
+}
+/* Suggested projects styles */
+.suggested-projects {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 900px;
+    color: white;
+    padding: 8px;
+}
+
+.suggested-projects h2 {
+    margin: 0 0 12px 0;
+    font-size: 1.15rem;
+    color: #ffffff;
+    text-align: left;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+}
+
+.project-card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+    border-radius: 12px;
+    padding: 14px;
+    color: #ffffff;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+    transition: transform .16s ease, box-shadow .16s ease;
+    text-align: left;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.6);
+    background: linear-gradient(135deg, #171a20 0%, #1b2026 100%);
+    backdrop-filter: none;
+}
+
+.project-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.project-desc {
+    margin: 8px 0 0 0;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.85);
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00bcd4;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
