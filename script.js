@@ -1,6 +1,7 @@
 const data = {
     user: {
         name: "Jesus de la Paz",
+        subtitle: "🚀 Software developer | Passionate about creating innovative tech! 💻✨",
         imageUrl: "./assets/avatar.png"
     },
     links: [
@@ -24,12 +25,14 @@ const data = {
 
 document.addEventListener("DOMContentLoaded", () => {
     const userNameElement = document.querySelector('.user-name');
+    const userSubtitleElement = document.querySelector('.user-subtitle');
     const userImageElement = document.querySelector('.user-image');
     const linksContainer = document.querySelector('.links');
     const suggestedProjectsContainer = document.querySelector('.suggested-projects');
 
     // Populate user data
     if (userNameElement) userNameElement.textContent = data.user.name;
+    if (userSubtitleElement && data.user.subtitle) userSubtitleElement.textContent = data.user.subtitle;
     if (userImageElement) userImageElement.src = data.user.imageUrl;
 
     // Populate links
