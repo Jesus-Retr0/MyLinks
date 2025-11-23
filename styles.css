@@ -53,20 +53,19 @@ body, html {
     height: 100px;
 }
 
-/* Make the links line up horizontally and wrap on small screens */
+
 .links {
     display: flex;
-    flex-wrap: wrap;        /* allow wrapping when space is tight */
-    gap: 12px;              /* space between items */
-    justify-content: center;/* center the row(s) horizontally */
-    align-items: stretch;   /* keep items uniform height if desired */
+    flex-wrap: wrap;        
+    gap: 12px;              
+    justify-content: center;
+    align-items: stretch;  
     margin-top: 18px;
     padding: 0 8px;
 }
 
-/* Each link appears as a pill/card and can size responsively */
 .link-item {
-    display: inline-flex;           /* inline so items sit next to each other */
+    display: inline-flex;          
     align-items: center;
     justify-content: center;
     padding: 10px 14px;
@@ -74,13 +73,19 @@ body, html {
     color: #00bcd4;
     background: rgba(255,255,255,0.03);
     border-radius: 10px;
-    min-width: 160px;              /* prevents shrinking too small on wide screens */
+    min-width: 160px;        
     max-width: 320px;
-    flex: 1 1 160px;               /* grow and shrink, base width 160px */
+    flex: 1 1 160px;               
     box-sizing: border-box;
 }
 
-/* Keep the icon and label nice inside the link */
+.link-item:hover {
+    background: rgba(255,255,255,0.06);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    text-decoration: none;
+    color: #00bcd4;
+}
+
 .link-item img {
     width: 20px;
     height: 20px;
@@ -88,7 +93,6 @@ body, html {
     flex-shrink: 0;
 }
 
-/* Optional: change layout on very small screens */
 @media (max-width: 420px) {
     .link-item {
         min-width: 120px;
@@ -96,7 +100,6 @@ body, html {
         font-size: 0.95rem;
     }
 }
-/* Suggested projects styles */
 .suggested-projects {
     margin-top: 30px;
     width: 100%;
@@ -161,10 +164,9 @@ body, html {
     text-decoration: underline;
 }
 
-/* Mobile: shrink project cards and clamp descriptions */
+
 @media (max-width: 520px) {
   .projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* smaller column min */
     gap: 10px;
     padding: 0;
   }
@@ -185,8 +187,6 @@ body, html {
     margin-top: 6px;
     font-size: 0.85rem;
     color: rgba(255,255,255,0.9);
-
-    /* Clamp long descriptions to 3 lines on WebKit (iOS Safari) */
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -199,7 +199,6 @@ body, html {
     font-size: 0.88rem;
   }
 
-  /* Slightly reduce spacing for links section on very small screens */
   .links {
     gap: 8px;
     padding: 0 6px;
@@ -224,7 +223,7 @@ body, html {
     white-space: normal;
 }
 
-/* Slightly smaller subtitle on very small screens */
+
 @media (max-width: 420px) {
     .user-subtitle {
         font-size: 0.88rem;
@@ -240,7 +239,6 @@ body, html {
     background: transparent;
 }
 
-/* Keep footer content aligned with the page width */
 .footer-inner {
     max-width: 900px;
     margin: 0 auto;

@@ -19,6 +19,10 @@ const data = {
             "title": "Markdown based Journal App",
             "url": "https://github.com/Jesus-Retr0/Markdown-based-Journal-App",
             "description": "A clean, journal app built with Electron and Javascript. Write and save journal entries in Markdown format - all stored as simple '.md' files on your machine."
+        },{
+            "title": "Simple Home Inventory Tracker",
+            "url": "https://github.com/Jesus-Retr0/Simple-Home-Inventory-Tracker",
+            "description": "AboutA simple PHP & MySQL web application to help you manage and track your home inventory"
         }
     ]
 };
@@ -83,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
             link.href = p.url || '#';
             link.target = '_blank';
             link.rel = 'noopener';
-            link.textContent = p.url ? 'Visit Project' : 'No link available';
+            link.textContent = p.url ? 'Visit Project' : '';
 
             card.appendChild(title);
             if (p.description) card.appendChild(desc);
