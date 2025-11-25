@@ -6,6 +6,7 @@ const data = {
     },
     links: [
         { url: "https://jesus-retr0.github.io/Portfolio", name: "Portfolio", iconUrl: "./assets/file-earmark-fill.svg" },
+        { url: "mailto:jesus_codes1@proton.me", name: "Email", iconUrl: "./assets/envelope.svg" },
         { url: "https://github.com/Jesus-Retr0", name: "GitHub", iconUrl: "https://github.githubassets.com/favicons/favicon-dark.png" }
     ],
     // suggestedProjects is an array of objects (JSON-style). Edit this data to add/remove projects.
