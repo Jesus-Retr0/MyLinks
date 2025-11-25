@@ -16,13 +16,13 @@ const data = {
             "description": "A simple, secure, and offline password manager written in Go. Generate strong passwords and store them in an encrypted vault file on your computer. No internet required—your secrets stay private."
         },
         {
-            "title": "Markdown based Journal App",
-            "url": "https://github.com/Jesus-Retr0/Markdown-based-Journal-App",
-            "description": "A clean, journal app built with Electron and Javascript. Write and save journal entries in Markdown format - all stored as simple '.md' files on your machine."
+            "title": "Node Talk",
+            "url": "",
+            "description": "Node Talk is a Python-based client/server application designed for real-time communication between two users. It allows users to exchange messages."
         },{
             "title": "Simple Home Inventory Tracker",
             "url": "https://github.com/Jesus-Retr0/Simple-Home-Inventory-Tracker",
-            "description": "AboutA simple PHP & MySQL web application to help you manage and track your home inventory"
+            "description": "A simple PHP & MySQL web application to help you manage and track your home inventory"
         }
     ]
 };
