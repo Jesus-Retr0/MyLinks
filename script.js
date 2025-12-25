@@ -20,8 +20,8 @@ const data = {
         },
         {
             "title": "Node Talk",
-            "url": "",
-            "description": "Node Talk is a Python-based client/server application designed for real-time communication between two users. It allows users to exchange messages."
+            "url": "https://file-server--jesus90.replit.app/",
+            "description": "Node Talk is a Python-based client/server application designed for real-time communication between two users. It allows users to exchange messages. Try out this Node talk demo made with replit."
         },{
             "title": "Simple Home Inventory Tracker",
             "url": "https://github.com/Jesus-Retr0/Simple-Home-Inventory-Tracker",
