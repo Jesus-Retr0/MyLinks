@@ -13,7 +13,7 @@ body, html {
     flex-direction: column; /* Arrange children vertically */
     margin: 0 auto;
     position: relative;
-    min-height: 990px;
+    min-height: 1390px;
     height: auto;
     width: 50%; /* Adjust as needed */
     text-align: center;
@@ -25,7 +25,7 @@ body, html {
 @media(max-width:992px) {
     .container {
         width: 70%;
-        min-height: 1050px;
+        min-height: 1450px;
         height: auto;
     }
 }
