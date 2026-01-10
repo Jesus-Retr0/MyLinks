@@ -59,11 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const toggleButton = document.getElementById('toggle-button');
     const spotifyFrameContainer = document.querySelector('.spotify-frame');
     let isPlaylistVisible = false; // To track the visibility of the playlist
+    let iframe; // Declare a variable to hold the iframe
 
     toggleButton.addEventListener('click', function() {
         if (isPlaylistVisible) {
-            spotifyFrameContainer.innerHTML = ''; // Clear existing contents
-            spotifyFrameContainer.style.height = '0';  // Collapse
+            // Collapse the playlist
+            spotifyFrameContainer.style.height = '0';  // Collapse height
             toggleButton.textContent = 'Show Playlist';
         } else {
             // Create the heading if it doesn't already exist
@@ -77,8 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             // Create the iframe only if it doesn't already exist
-            if (spotifyFrameContainer.children.length === 1) { // Only one child which will be heading
-                const iframe = document.createElement('iframe');
+            if (!iframe) {
+                iframe = document.createElement('iframe');
                 iframe.src = "https://open.spotify.com/embed/playlist/1ecoN9W6hztW6w0FafOjH8?utm_source=generator";
                 iframe.width = "100%"; // Responsive width
                 iframe.height = "380"; // Height of iframe
@@ -87,11 +88,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 spotifyFrameContainer.appendChild(iframe);
             }
 
-            spotifyFrameContainer.classList.add('active'); // Use .active for animation
+            // Expand to show iframe
+            spotifyFrameContainer.style.height = '380px'; // Expand height
             toggleButton.textContent = 'Hide Playlist';
         }
         isPlaylistVisible = !isPlaylistVisible; // Toggle state
     });
+
 
 
 
