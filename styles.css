@@ -9,20 +9,30 @@ body, html {
 }
 
 .container {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Arrange children vertically */
     margin: 0 auto;
     position: relative;
-    min-height: 100%;
+    min-height: 990px;
     height: auto;
-    width: 50%;
+    width: 50%; /* Adjust as needed */
     text-align: center;
     color: #232b39;
     border-radius: 15px;
     box-sizing: border-box;
 }
+
+@media(max-width:992px) {
+    .container {
+        width: 70%;
+        min-height: 1050px;
+        height: auto;
+    }
+}
 @media(max-width:577px) {
     .container {
         width: 100%;
-        min-height: 900px;
+        min-height: 1500px;
         height: auto;
     }
 }
@@ -102,6 +112,45 @@ body, html {
         font-size: 0.95rem;
     }
 }
+
+.spotify-frame h2 {
+    color: #ffffff; /* Set heading color */
+    margin: 0 0 12px 0; /* Space below */
+    font-size: 1.15rem; /* Adjust font size as needed */
+    text-align: left; /* Align text */
+}
+
+
+.spotify-frame {
+    height: 0; 
+    overflow: hidden; 
+    transition: height 0.5s ease; /* Smooth transition */
+    margin-top: 20px;    
+}
+
+.spotify-frame.active {
+    height: 380px; 
+}
+#toggle-button {
+    min-width: 160px; /* Same minimum width as link items */
+    margin-top: 20px; /* Spacing from other elements */
+    font-size: 1rem; /* Adjust font size if needed */
+    border: none;
+    background-color: rgba(255, 255, 255, 0.03); /* Background effect */
+    color: #00bcd4; /* Text color from link items */
+    border-radius: 10px; /* Matches link item */
+    padding: 10px 14px; /* Like link items */
+    transition: background 0.3s ease; /* Transition effect */
+    cursor: pointer; /* Pointer cursor */
+}
+
+#toggle-button:hover {
+    background: rgba(255, 255, 255, 0.06); /* Background on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+
+
+
 .suggested-projects {
     margin-top: 30px;
     width: 100%;
@@ -244,4 +293,10 @@ body, html {
 .footer-inner {
     max-width: 900px;
     margin: 0 auto;
+}
+
+.separator {
+    height: 1px; /* Line height */
+    background-color: rgba(255, 255, 255, 0.1); /* Light grey color */
+    margin: 20px 0; /* Space above and below the line */
 }

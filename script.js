@@ -55,6 +55,46 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // Spotify
+    const toggleButton = document.getElementById('toggle-button');
+    const spotifyFrameContainer = document.querySelector('.spotify-frame');
+    let isPlaylistVisible = false; // To track the visibility of the playlist
+
+    toggleButton.addEventListener('click', function() {
+        if (isPlaylistVisible) {
+            spotifyFrameContainer.innerHTML = ''; // Clear existing contents
+            spotifyFrameContainer.style.height = '0';  // Collapse
+            toggleButton.textContent = 'Show Playlist';
+        } else {
+            // Create the heading if it doesn't already exist
+            if (!spotifyFrameContainer.querySelector('h2')) {
+                const heading = document.createElement('h2');
+                heading.textContent = 'Spotify Playlist';
+                heading.style.color = '#ffffff'; // Match suggested projects heading color 
+                heading.style.margin = '0 0 12px 0'; // Add some margin
+                heading.style.textAlign = 'left'; // Align left
+                spotifyFrameContainer.appendChild(heading);
+            }
+
+            // Create the iframe only if it doesn't already exist
+            if (spotifyFrameContainer.children.length === 1) { // Only one child which will be heading
+                const iframe = document.createElement('iframe');
+                iframe.src = "https://open.spotify.com/embed/playlist/1ecoN9W6hztW6w0FafOjH8?utm_source=generator";
+                iframe.width = "100%"; // Responsive width
+                iframe.height = "380"; // Height of iframe
+                iframe.frameBorder = "0";
+                iframe.allow = "encrypted-media";
+                spotifyFrameContainer.appendChild(iframe);
+            }
+
+            spotifyFrameContainer.classList.add('active'); // Use .active for animation
+            toggleButton.textContent = 'Hide Playlist';
+        }
+        isPlaylistVisible = !isPlaylistVisible; // Toggle state
+    });
+
+
+
     // Populate suggested projects dynamically from the JSON data
     function renderSuggestedProjects(projects) {
         if (!suggestedProjectsContainer) return;
