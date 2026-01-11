@@ -26,6 +26,10 @@ const data = {
             "title": "Simple Home Inventory Tracker",
             "url": "https://github.com/Jesus-Retr0/Simple-Home-Inventory-Tracker",
             "description": "A simple PHP & MySQL web application to help you manage and track your home inventory"
+        },
+        {
+            "title": "Twitch Chat Overlay",
+            "description": "I built my own Twitch chat overlay using HTML, CSS, and JavaScript. It allows me to display chat messages on my stream with customizable styles and animations."
         }
     ]
 };
