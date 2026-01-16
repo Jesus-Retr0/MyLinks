@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (isPlaylistVisible) {
             // Collapse the playlist
             spotifyFrameContainer.style.height = '0';  // Collapse height
-            toggleButton.textContent = 'Show Playlist';
+            toggleButton.textContent = 'Show Spotify Playlist';
         } else {
             // Create the heading if it doesn't already exist
             if (!spotifyFrameContainer.querySelector('h2')) {
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Expand to show iframe
             spotifyFrameContainer.style.height = '380px'; // Expand height
-            toggleButton.textContent = 'Hide Playlist';
+            toggleButton.textContent = 'Hide Spotify Playlist';
         }
         isPlaylistVisible = !isPlaylistVisible; // Toggle state
     });
